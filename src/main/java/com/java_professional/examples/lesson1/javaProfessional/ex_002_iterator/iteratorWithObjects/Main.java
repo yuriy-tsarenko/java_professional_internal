@@ -15,7 +15,7 @@ public class Main {
 
         while (carIterator.hasNext()) {
             Animal tmp = carIterator.next();
-            if (tmp.breed.equals("Sphynx")){
+            if (tmp.breed.equals("Sphynx")) {
                 tmp.price += 1000;
             }
         }
