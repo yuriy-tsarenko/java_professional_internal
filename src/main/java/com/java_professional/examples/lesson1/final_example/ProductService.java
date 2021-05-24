@@ -1,6 +1,9 @@
 package com.java_professional.examples.lesson1.final_example;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ProductService {
     public static void main(String[] args) {
