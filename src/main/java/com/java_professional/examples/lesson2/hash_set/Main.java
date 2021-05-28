@@ -1,6 +1,9 @@
 package com.java_professional.examples.lesson2.hash_set;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
