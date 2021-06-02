@@ -11,27 +11,27 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String s = (char) 27 + "[31m";
-        String s1 = (char) 27 + "[39m";
-        String s2 = (char) 27 + "[34m";
+        String red = (char) 27 + "[31m";//red
+        String white = (char) 27 + "[39m";//white
+        String blue = (char) 27 + "[34m";//blue
         // Получаем класс который описывает класс CatMethods
-        Class<?> cl = CatFields.class;
-        System.out.println(s + "Public Reflection fields:");
+        Class<CatFields> fieldsClass = CatFields.class;
+        System.out.println(red + "Public Reflection fields:");
         // Метод getFields(), возвращает только поля с модификатором public
-        Field[] fields = cl.getFields();
+        Field[] fields = fieldsClass.getFields();
         // Пробегаемся по классу Field и выводим все public поля
         for (Field field : fields) {
             Class<?> fieldType = field.getType();
-            System.out.println(s2 + "\tName: " + s1 + field.getName());
-            System.out.println(s2 + "\tType: " + s1 + fieldType.getName());
+            System.out.println(blue + "\tName: " + white + field.getName());
+            System.out.println(blue + "\tType: " + white + fieldType.getName());
         }
 
-        System.out.println(s + "All Modifiers Reflection fields:");
-        fields = cl.getDeclaredFields();
+        System.out.println(red + "All Modifiers Reflection fields:");
+        fields = fieldsClass.getDeclaredFields();
         for (Field field : fields) {
             Class<?> fieldType = field.getType();
-            System.out.println(s2 + "\tName: " + s1 + field.getName());
-            System.out.println(s2 + "\tType: " + s1 + fieldType.getName());
+            System.out.println(blue + "\tName: " + white + field.getName());
+            System.out.println(blue + "\tType: " + white + fieldType.getName());
         }
     }
 }

@@ -1,11 +1,13 @@
 package com.java_professional.examples.lesson5.reflection.ex_003_ClassForName.featuresOfClass;
 
+import java.io.IOException;
 import java.lang.reflect.Member;
+import java.util.Map;
 
 // В параметрах добавить путь к классу(java.lang.String)
 public class Main2 {
-    public static void main(String[] args) {
-        String path = "com.java_professional.tsarenko.classwork.lesson6.reflection.SimpleArrayListCapacity";
+    public static void main(String[] args) throws IOException {
+        String path = "com.java_professional.examples.lesson5.reflection.SimpleArrayListCapacity";
         try {
             // Получаем объект типа класс
             Class<?> c = Class.forName(args[0]);

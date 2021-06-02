@@ -59,23 +59,23 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String s = (char) 27 + "[31m";
-        String s1 = (char) 27 + "[39m";
-        String s2 = (char) 27 + "[34m";
+        String red = (char) 27 + "[31m";
+        String white = (char) 27 + "[39m";
+        String blue = (char) 27 + "[34m";
         // Получаем класс который описывает класс CatMethods
-        Class<?> cl = CatMethods.class;
+        Class<CatMethods> cl = CatMethods.class;
 
-        System.out.println(s + "Constructors:" + s1);
+        System.out.println(red + "Constructors:" + white);
         // Получаем массив конструкторов
         Constructor<?>[] constructors = cl.getConstructors();
 
         int i = 0;
         for (Constructor<?> ctr : constructors) {
             // Выводим типы параметров каждого конструктора
-            System.out.print(s + "\tConstructor "  + (++i) + ": ");
+            System.out.print(red + "\tConstructor " + (++i) + ": ");
             Class<?>[] paramTypes = ctr.getParameterTypes();
             for (Class<?> paramType : paramTypes) {
-                System.out.print(s1 + paramType.getName() + " ");
+                System.out.print(white + paramType.getName() + " ");
             }
             System.out.println();
         }
@@ -88,17 +88,17 @@ public class Main {
             Constructor<?> ctr = cl.getConstructor(paramTypes);
             // newInstance  = new, передаем объект
             CatMethods cm = (CatMethods) ctr.newInstance(Integer.valueOf(1));
-            System.out.println(s + "Fields: " + s1 + " Age - " + cm.getAge() + ", Name - " + cm.getName() + ", Ears - "
+            System.out.println(red + "Fields: " + white + " Age - " + cm.getAge() + ", Name - " + cm.getName() + ", Ears - "
                     + cm.getEars() + ", Tail - " + cm.getTail());
         } catch (Exception ex) {
             ex.printStackTrace();
         }
         Method[] methods = cl.getMethods();
         for (Method method : methods) {
-            System.out.println(s + "Name: " + s2 + method.getName());
-            System.out.println(s + "\tReturn type: " + s1 + method.getReturnType().getName());
+            System.out.println(red + "Name: " + blue + method.getName());
+            System.out.println(red + "\tReturn type: " + white + method.getReturnType().getName());
             Class<?>[] paramTypes = method.getParameterTypes();
-            System.out.print(s + "\tParam types:" + s1);
+            System.out.print(red + "\tParam types:" + white);
             for (Class<?> paramType : paramTypes) {
                 System.out.print(" " + paramType.getName());
             }
@@ -115,7 +115,7 @@ public class Main {
             // первый - это объект, класс которого объявляет или наследует данный метод,
             // второй - массив значений параметров, которые передаются вызываемому методу
             method.invoke(cm, objArguments);
-            System.out.println(s + "Age: " + s1 + cm.getAge());
+            System.out.println(red + "Age: " + white + cm.getAge());
         } catch (Exception ex) {
             ex.printStackTrace();
         }

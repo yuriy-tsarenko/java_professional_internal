@@ -11,7 +11,7 @@ public class Main {
         String s1 = (char) 27 + "[39m";
         String s2 = (char) 27 + "[34m";
         // Получаем класс который описывает класс CatModifier
-        Class cl = CatModifier.class;
+        Class<CatModifier> cl = CatModifier.class;
         // Узнаем имя класса
         System.out.println(s + "Class name: " + s1 + cl.getName());
         System.out.print(s + "Modifiers of class: " + s1);
