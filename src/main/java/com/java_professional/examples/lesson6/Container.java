@@ -10,7 +10,8 @@ public class Container {
         this.clazz = clazz;
     }
 
-    public Object getInstance() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public Object getInstance() throws NoSuchMethodException, InvocationTargetException, InstantiationException,
+            IllegalAccessException {
         return clazz.getConstructor().newInstance();
     }
 }

@@ -14,7 +14,8 @@ public class Main {
         try {
             List<UserDto> parse = parser.parse("example.csv", UserDto.class, ";");
             parse.forEach(System.out::println);
-        } catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
+        } catch (NoSuchMethodException | InvocationTargetException
+                | InstantiationException | IllegalAccessException e) {
             log.error(e);
         }
     }

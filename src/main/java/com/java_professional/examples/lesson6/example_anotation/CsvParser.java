@@ -24,7 +24,8 @@ public class CsvParser<T> {
         }
     }
 
-    public List<T> parse(String filePath, Class<T> type, String separator) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public List<T> parse(String filePath, Class<T> type, String separator) throws NoSuchMethodException,
+            InvocationTargetException, InstantiationException, IllegalAccessException {
         String content = getContent(filePath);
         String[] lines = getLines(content);
         List<T> list = new ArrayList<>();
@@ -37,7 +38,8 @@ public class CsvParser<T> {
         return list;
     }
 
-    private T buildObject(Field[] declaredFields, T newInstance, String line, String separator) throws IllegalAccessException {
+    private T buildObject(Field[] declaredFields, T newInstance, String line, String separator)
+            throws IllegalAccessException {
         for (Field field : declaredFields) {
             if (field.isAnnotationPresent(CsvField.class)) {
                 field.setAccessible(true);
