@@ -5,7 +5,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 public class SimpleReflection {
-    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException,
+            InvocationTargetException, InstantiationException, IllegalAccessException {
         // 1. getClass()
 //        SimpleReflection simpleReflection = new SimpleReflection();
 //        Class<?> cl = simpleReflection.getClass();

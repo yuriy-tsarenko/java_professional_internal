@@ -88,8 +88,8 @@ public class Main {
             Constructor<?> ctr = cl.getConstructor(paramTypes);
             // newInstance  = new, передаем объект
             CatMethods cm = (CatMethods) ctr.newInstance(Integer.valueOf(1));
-            System.out.println(red + "Fields: " + white + " Age - " + cm.getAge() + ", Name - " + cm.getName() + ", Ears - "
-                    + cm.getEars() + ", Tail - " + cm.getTail());
+            System.out.println(red + "Fields: " + white + " Age - " + cm.getAge() + ", Name - " + cm.getName()
+                    + ", Ears - " + cm.getEars() + ", Tail - " + cm.getTail());
         } catch (Exception ex) {
             ex.printStackTrace();
         }
