@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * @author Ruslan
+ * Homework6 task2
  */
 
 public class Calculator {
@@ -34,12 +35,12 @@ public class Calculator {
         }
     }
 
-    /*
+    /**
      * Calling a method depending on the operator value allows to call corresponding methods
      *
-     * @param first
-     * @param second
-     * @param operator
+     * @param first first value
+     * @param second second value
+     * @param operator operator value
      * @return allows to call methods plus, minus, multiplays, multiplays;
      * @throws ArithmeticException - In case of incorrect operator value
      */
@@ -65,12 +66,11 @@ public class Calculator {
         return result;
     }
 
-
-    /*
+    /**
      * Method call of the method allows to find out the result of division
      *
-     * @param first
-     * @param second
+     * @param first uses first value
+     * @param second uses second value
      * @return computed result
      */
 
@@ -78,33 +78,33 @@ public class Calculator {
         return first / second;
     }
 
-    /*
+    /**
      * Method call of the method allows to find out the result of multiplay
      *
-     * @param first
-     * @param second
+     * @param first uses first value
+     * @param second uses second value
      * @return computed result
      */
     private static int multiplays(int first, int second) {
         return first * second;
     }
 
-    /*
+    /**
      * Method call of the method allows to find out the result of plus
      *
-     * @param first
-     * @param second
+     * @param first uses first value
+     * @param second uses second value
      * @return computed result
      */
     private static int plus(int first, int second) {
         return first + second;
     }
 
-    /*
+    /**
      * Method call of the method allows to find out the result of minus
      *
-     * @param  first
-     * @param second
+     * @param  first uses first value
+     * @param second uses second value
      * @return computed result
      */
     private static int minus(int first, int second) {
