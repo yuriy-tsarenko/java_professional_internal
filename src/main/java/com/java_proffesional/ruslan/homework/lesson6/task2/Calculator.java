@@ -1,21 +1,18 @@
 package com.java_proffesional.ruslan.homework.lesson6.task2;
 
-import org.apache.log4j.Logger;
 
 import java.util.Scanner;
 
 /**
- * @link com.cbs.java_essential.examples.lesson8;
- *
  * @author Ruslan
- *
  */
 
 public class Calculator {
-
-    private static final Logger log = Logger.getLogger(Calculator.class);
-
     public static void main(String[] args) {
+        /*
+         * Scanner allows to take values from the console: first, second, operator
+         * An exception is thrown if a value is entered incorrectly ArithmeticException
+         */
         Scanner scanner = new Scanner(System.in);
         boolean flag = true;
         while (flag) {
@@ -31,30 +28,85 @@ public class Calculator {
                 System.out.println("result: " + result);
                 flag = false;
             } catch (ArithmeticException e) {
-                log.warn(e);
                 System.out.println(e.getMessage());
                 System.out.println("try again");
             }
         }
     }
 
-
+    /*
+     * Calling a method depending on the operator value allows to call corresponding methods
+     *
+     * @param first
+     * @param second
+     * @param operator
+     * @return allows to call methods plus, minus, multiplays, multiplays;
+     * @throws ArithmeticException - In case of incorrect operator value
+     */
     private static int getResult(int first, int second, String operator) throws ArithmeticException {
+        int result;
         switch (operator) {
             case "+":
-                return plus(first, second);
+                result = plus(first, second);
+                break;
             case "-":
-                return minus(first, second);
+                result = minus(first, second);
+                break;
+            case "*":
+                result = multiplays(first, second);
+                break;
+            case "/":
+                result = division(first, second);
+                break;
+
             default:
                 throw new ArithmeticException("unsupported operator");
         }
+        return result;
     }
 
 
+    /*
+     * Method call of the method allows to find out the result of division
+     *
+     * @param first
+     * @param second
+     * @return computed result
+     */
+
+    private static int division(int first, int second) {
+        return first / second;
+    }
+
+    /*
+     * Method call of the method allows to find out the result of multiplay
+     *
+     * @param first
+     * @param second
+     * @return computed result
+     */
+    private static int multiplays(int first, int second) {
+        return first * second;
+    }
+
+    /*
+     * Method call of the method allows to find out the result of plus
+     *
+     * @param first
+     * @param second
+     * @return computed result
+     */
     private static int plus(int first, int second) {
         return first + second;
     }
 
+    /*
+     * Method call of the method allows to find out the result of minus
+     *
+     * @param  first
+     * @param second
+     * @return computed result
+     */
     private static int minus(int first, int second) {
         return first - second;
     }
