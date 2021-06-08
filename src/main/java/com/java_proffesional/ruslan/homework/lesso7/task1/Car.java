@@ -23,7 +23,7 @@ public class Car implements Serializable {
      * car's color
      * car's price
      */
-    private static int tures = 4; //не сериализуется
+    private static int tures = 4; //is not serialized
     private String name;
     private String color;
     private int price;
