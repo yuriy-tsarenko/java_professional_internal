@@ -15,8 +15,8 @@ public class Calculator {
          * An exception is thrown if a value is entered incorrectly ArithmeticException
          */
         Scanner scanner = new Scanner(System.in);
-        boolean flag = true;
-        while (flag) {
+      //  boolean flag = true;
+        while (true) {
             System.out.println("first value:");
             int first = scanner.nextInt();
             System.out.println("second value:");
@@ -27,9 +27,8 @@ public class Calculator {
             try {
                 int result = getResult(first, second, operator);
                 System.out.println("result: " + result);
-                flag = false;
+            //    flag = false;
             } catch (ArithmeticException e) {
-                System.out.println(e.getMessage());
                 System.out.println("try again");
             }
         }
