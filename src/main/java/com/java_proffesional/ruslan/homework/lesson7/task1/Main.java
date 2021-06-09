@@ -1,4 +1,4 @@
-package com.java_proffesional.ruslan.homework.lesso7.task1;
+package com.java_proffesional.ruslan.homework.lesson7.task1;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,7 +17,7 @@ import java.io.ObjectOutputStream;
 public class Main {
     public static void main(String[] args) {
         // Create an object of class file and specify the file
-        File file = new File("file_car.txt");
+        File file = new File("task1.txt");
         Car car = new Car("Audi", "Red", 14000);
 
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file));

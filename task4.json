@@ -1,0 +1,25 @@
+{
+  "code": 200,
+  "meta": {
+    "pagination": {
+      "total": 12,
+      "pages": 1,
+      "page": 1,
+      "limit": 20
+    }
+  },
+  "products":[
+    {
+      "id": 2,
+      "name": "Outdoors, Games \u0026 Jewelry",
+      "description": "Atque odit crudelis aeneus adipiscor utpote impedit.",
+      "status": true
+    },
+    {
+      "id": 3,
+      "name": "Books \u0026 Garden",
+      "description": "Dolor ipsa demoror corrupti laudantium crinis.",
+      "status": true
+    }
+  ]
+}

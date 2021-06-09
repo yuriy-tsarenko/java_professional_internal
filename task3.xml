@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<vehicle>
+    <car>
+        <brand>BMW</brand>
+        <speed>200</speed>
+        <color>black</color>
+        <price>10000</price>
+        <publish_date>2021-26-03</publish_date>
+    </car>
+    <bike>
+        <brand>Kawasaki</brand>
+        <speed>230</speed>
+        <color>red</color>
+        <price>5000</price>
+        <publish_date>2021-26-03</publish_date>
+    </bike>
+</vehicle>

@@ -1,4 +1,4 @@
-package com.java_proffesional.ruslan.homework.lesso7.task1;
+package com.java_proffesional.ruslan.homework.lesson7.task1;
 
 import lombok.NoArgsConstructor;
 import lombok.ToString;
