@@ -2,19 +2,25 @@ package com.java_proffesional.ruslan.homework.lesson10.task3;
 
 import java.util.Scanner;
 
+/**
+ * @author Ruslan
+ * Homework10 task3
+ * Напишите основные арифметические действия калькулятора, используя лямбда-выражения.
+ */
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
 
-        System.out.println("first value:");
-        int first = scanner.nextInt();
-        System.out.println("second value:");
-        int second = scanner.nextInt();
-        scanner = new Scanner(System.in);
-        System.out.println("operator value:");
-        String operator = scanner.next();
+            System.out.println("first value:");
+            int first = scanner.nextInt();
+            System.out.println("second value:");
+            int second = scanner.nextInt();
+            scanner = new Scanner(System.in);
+            System.out.println("operator value:");
+            String operator = scanner.next();
 
         switch (operator) {
             case "*": {
