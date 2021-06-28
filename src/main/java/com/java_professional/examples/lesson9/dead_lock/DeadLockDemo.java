@@ -13,7 +13,6 @@ public class DeadLockDemo {
         LockedResourceTwo lockedResourceTwo = new LockedResourceTwo();
 
         Runnable job = new Runnable() {
-            @SneakyThrows
             @Override
             public void run() {
                 lockedResource.lockedResourceMethod(lockedResourceTwo);
@@ -21,13 +20,11 @@ public class DeadLockDemo {
         };
 
         Runnable jobTwo = new Runnable() {
-            @SneakyThrows
             @Override
             public void run() {
                 lockedResourceTwo.lockedResourceMethodTwo(lockedResource);
             }
         };
-
 
         Thread threadOne = new Thread(job, "dead-thread-1");
         Thread threadTwo = new Thread(jobTwo, "dead-thread-2");
