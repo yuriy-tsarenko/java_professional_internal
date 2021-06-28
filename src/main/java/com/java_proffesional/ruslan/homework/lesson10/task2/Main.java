@@ -1,7 +1,8 @@
 package com.java_proffesional.ruslan.homework.lesson10.task2;
 
-import java.util.ArrayList;
-import java.util.concurrent.ThreadLocalRandom;
+
+import java.util.LinkedList;
+import java.util.List;
 import java.util.stream.Stream;
 
 /**
@@ -18,10 +19,10 @@ public class Main {
 
 
         // Создаем список данных из случайного массива чисел
-        ArrayList<Integer> arrayRandom = new ArrayList<>();
+        List<Integer> arrayRandom = new LinkedList<>();
         int number;
         for (int i = 0; i < 10; i++) {
-            number = ThreadLocalRandom.current().nextInt(1, 100);
+            number = (int) (Math.random() * (100 + 1)) + 1;
             arrayRandom.add(number);
         }
 
@@ -30,9 +31,9 @@ public class Main {
         // Создаем поток из массива arrayRandom
         Stream<Integer> integerStream = arrayRandom.stream();
 
-        Integer summary = integerStream
-                .map(i -> i * i)//Этот метод берет последовательность входных элементов и возводит в квадрат
-                .reduce(0, Integer::sum);//Этот метод аккамулирует сумму квадратов
+        Double summary = integerStream
+                .map(i -> Math.pow(i, 2))//Этот метод берет последовательность входных элементов и возводит в квадрат
+                .reduce((double) 0, Double::sum);//Этот метод аккамулирует сумму квадратов
 
         System.out.println("Сумма квадратов массива: " + summary);
 
